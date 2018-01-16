@@ -1,0 +1,14 @@
+package org.usfirst.frc.team2554.robot;
+
+import org.usfirst.frc.team2554.robot.subsystems.ElevatorSubsystem;
+import org.usfirst.frc.team2554.robot.commands.*;
+
+public class ElevatorController {
+	
+	public static final ElevatorSubsystem kElevatorSubsystem = new ElevatorSubsystem();
+	
+	
+	public void ElevatorController(){
+		
+	}
+}

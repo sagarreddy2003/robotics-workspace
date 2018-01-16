@@ -1,0 +1,23 @@
+/**
+ * 
+ */
+package org.usfirst.frc.team2554.robot.commands;
+
+import edu.wpi.first.wpilibj.command.Command;
+
+/**
+ * @author SagarVeeru
+ *
+ */
+public class TestCommand extends Command {
+
+	/* (non-Javadoc)
+	 * @see edu.wpi.first.wpilibj.command.Command#isFinished()
+	 */
+	@Override
+	protected boolean isFinished() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

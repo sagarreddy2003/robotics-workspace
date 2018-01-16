@@ -1,0 +1,38 @@
+package org.usfirst.frc.team2554.robot.subsystems;
+
+import org.usfirst.frc.team2554.robot.RobotMap;
+
+import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.Victor;
+
+public class ElevatorSubsystem extends Subsystem {
+	// Put methods for controlling this subsystem
+	// here. Call these from Commands.
+	
+	Victor victorA = new Victor(RobotMap.elevator[0]);
+	Victor victorB = new Victor(RobotMap.elevator[1]);
+	
+	public int currentStep = 0;
+	private final int maxStep = 4;
+	private final int minStep = 0;
+	
+	public void initDefaultCommand() {
+		// Set the default command for a subsystem here.
+		// setDefaultCommand(new MySpecialCommand());
+	}
+	
+	public int currentStep() {
+		return currentStep;
+	}
+	
+	public boolean stepUp(int steps) {
+		
+		currentStep ++;
+		return true;
+	}
+	public boolean stepDown(int steps) {
+		
+		currentStep --;
+		return true;
+	}
+}

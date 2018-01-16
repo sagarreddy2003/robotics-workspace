@@ -1,0 +1,9 @@
+package org.usfirst.frc.team2554.robot.commands;
+
+import org.usfirst.frc.team2554.robot.Robot;
+
+import edu.wpi.first.wpilibj.command.Command;
+
+public class ElevatorStepDownCommand extends Command {
+
+}

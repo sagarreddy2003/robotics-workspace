@@ -1,0 +1,12 @@
+package org.usfirst.frc.team2554.robot;
+
+import org.usfirst.frc.team2554.robot.Robot;
+
+import edu.wpi.first.wpilibj.command.Command;
+
+public class ElevatorController {
+	
+	public void ElevatorController(){
+		
+	}
+}

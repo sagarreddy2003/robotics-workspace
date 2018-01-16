@@ -1,0 +1,59 @@
+package org.usfirst.frc.team2554.robot.subsystems;
+
+import org.usfirst.frc.team2554.robot.RobotMap;
+
+import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.wpilibj.Victor;
+import edu.wpi.first.wpilibj.DigitalInput;
+
+
+public class ElevatorSubsystem extends Subsystem {
+	
+	//Initialize the motors
+	Victor victorA = new Victor(RobotMap.elevator[0]);
+	Victor victorB = new Victor(RobotMap.elevator[1]);
+	
+	//Initialize the limit switches
+	DigitalInput limitSwitch1 = new DigitalInput(RobotMap.limitSwitches[0]);
+	DigitalInput limitSwitch2 = new DigitalInput(RobotMap.limitSwitches[1]);
+	DigitalInput limitSwitch3 = new DigitalInput(RobotMap.limitSwitches[2]);
+	
+	/*
+	 * Here are the different steps that the elevator can be at:
+	 * 0: Lowest Level/Floor
+	 * 1: Switch Level
+	 * 2: Scale Level
+	 * 3: Climb Level
+	 */
+	
+	public int currentStep = 0; //the current step the elevator is at
+	private static int maxStep = 3; //The highest step the elevator can be at
+	private static int minStep = 0; //The lowest level the elevator can be at
+	
+	public void initDefaultCommand() {
+		
+	}
+	
+	public int currentStep() {
+		return currentStep;
+	}
+	
+	public boolean stepUp(int steps) {
+		if(currentStep == maxStep) {//If elevator is already at maximum step
+			return false; //false means that elevator cannot be moved up.
+		}
+		
+		//if not at maximum step then step up the elevator
+		currentStep ++;
+		return true;
+	}
+	public boolean stepDown(int steps) {
+		if(currentStep == minStep) {//If elevator is already at minimum step
+			return false; //false means that elevator cannot be moved down.
+		}
+		
+		//if not at minimum step then step up the elevator
+		currentStep --;
+		return true;
+	}
+}

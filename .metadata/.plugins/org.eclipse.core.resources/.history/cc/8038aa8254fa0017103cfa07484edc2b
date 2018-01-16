@@ -1,0 +1,16 @@
+package org.usfirst.frc.team2554.robot;
+
+import org.usfirst.frc.team2554.robot.subsystems.ElevatorSubsystem;
+import org.usfirst.frc.team2554.robot.commands.ElevatorStepDownCommand;
+import org.usfirst.frc.team2554.robot.commands.ElevatorStepUpCommand;
+
+public class ElevatorController {
+	
+	public static final ElevatorSubsystem kElevatorSubsystem = new ElevatorSubsystem();
+	
+	ElevatorStepDownCommand elevatorStepDown = new ElevatorStepDownCommand();
+	ElevatorStepUpCommand elevatorStepUp = new ElevatorStepUpCommand();
+	public ElevatorController(){
+		
+	}
+}
